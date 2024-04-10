@@ -131,6 +131,34 @@ header {
 
 					.menu-icon {
 						display: none;
+						width: 30px;
+
+						span {
+							display: block;
+							height: 2px;
+							width: 23px;
+							border-radius: 99px;
+							background: #fff;
+							transition: 0.3s ease;
+							transform-origin: left;
+						}
+
+						&.active {
+							span {
+								&:nth-child(1) {
+									transform: rotate(45deg);
+								}
+
+								&:nth-child(2) {
+									transform: scale(0);
+								}
+
+								&:nth-child(3) {
+									transform: rotate(-45deg);
+								}
+
+							}
+						}
 					}
 				}
 			}
@@ -1477,7 +1505,11 @@ footer {
 						}
 
 						.menu-icon {
-							display: block;
+							display: flex;
+							flex-wrap: wrap;
+							gap: 6px;
+							align-items: center;
+							justify-content: center;
 							color: white;
 							font-size: 20px;
 						}
