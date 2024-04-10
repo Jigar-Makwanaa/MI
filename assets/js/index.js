@@ -8,28 +8,14 @@ const openNav = () => {
 document.getElementById("mobileMenu").addEventListener("click", openNav);
 // hameburger menu end
 
-// main-slider start
-$('.slider-section .owl-carousel').owlCarousel({
-	loop: true,
-	// margin: 10,
-	dots: true,
-	nav: true,
-	mouseDrag: true,
-	autoplay: 3000,
-	animateOut: 'slideOutLeft',
-	responsive: {
-		0: {
-			items: 1
-		},
-		600: {
-			items: 1
-		},
-		1000: {
-			items: 1
-		}
+window.onload= function() {
+	if(screen.width<=575) {
+		const detail = $(".slider-section .container .row .content .detail p").text();;
+		console.log(screen.width);
+		const demo =detail.slice(0,200);
+		$(".slider-section .container .row .content .detail p").text(demo+"...")
 	}
-});
-// main-slider end
+}
 
 // solution section script start
 $(".solution-section .container .row .slide .photo:nth-child(1)").addClass("active-img");
