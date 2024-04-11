@@ -1,6 +1,4 @@
 // header color change start
-let obj = document.styleSheets[0].cssRules;
-console.log(obj);
 document.addEventListener('DOMContentLoaded', function () {
 	// Get the header element
 	const header = document.getElementById('main-header');
