@@ -64,16 +64,34 @@ h2 {
   overflow: hidden;
 }
 
+.after::after {
+  transform: translate(-100%);
+}
+
 header {
   position: relative;
   z-index: 1;
   padding-top: 40px;
 }
+header::after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  background-color: orangered;
+  width: 30%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 75px) 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, calc(100% - 75px) 100%, 0% 100%);
+  z-index: -1;
+  transition: all 0.5s;
+  opacity: 1;
+}
 header .container .row .main-box {
   padding: 0px 15px;
 }
 header .container .row .main-box .logo {
-  width: 150px;
+  width: 140px;
 }
 header .container .row .main-box .logo a {
   display: block;
@@ -92,27 +110,59 @@ header .container .row .main-box .menu-btn .menubar ul {
   flex-wrap: wrap;
 }
 header .container .row .main-box .menu-btn .menubar ul li {
-  cursor: pointer;
-  padding: 10px 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 header .container .row .main-box .menu-btn .menubar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
   text-transform: capitalize;
   font-weight: bold;
   color: white;
   font-size: 18px;
+  text-transform: capitalize;
+}
+header .container .row .main-box .menu-btn .menubar ul li:hover a {
+  color: yellow;
 }
 header .container .row .main-box .menu-btn .btn {
   padding-left: 15px;
 }
 header .container .row .main-box .menu-btn .btn a {
+  position: relative;
   display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s;
   text-transform: uppercase;
   padding: 15px 28px;
   color: white;
   font-weight: bold;
-  background-color: #064621;
+  background-color: #006e2f;
   border-radius: 6px;
   font-size: 15px;
+}
+header .container .row .main-box .menu-btn .btn a::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  width: 150%;
+  height: 150%;
+  background-color: #fff700;
+  left: 15%;
+  top: 0px;
+  right: -20%;
+  z-index: -1;
+  transform: skewX(45deg) scaleX(0);
+  transition: all 0.5s;
+}
+header .container .row .main-box .menu-btn .btn a:hover {
+  color: black;
+}
+header .container .row .main-box .menu-btn .btn a:hover::after {
+  transform: skewX(45deg) scale(1);
 }
 header .container .row .main-box .menu-btn .menu-icon {
   display: none;
@@ -282,14 +332,29 @@ footer .sub-footer-curve p {
     width: 100%;
   }
   header .container .row .main-box .menu-btn .menubar ul li {
+    display: block;
     width: 100%;
     border-top: 1px solid #dddddd;
-    padding: 15px;
+    padding: 0px;
   }
   header .container .row .main-box .menu-btn .menubar ul li a {
+    display: block;
     color: #575250;
     font-weight: 100;
     font-size: 16px;
+    padding: 15px;
+  }
+  header .container .row .main-box .menu-btn .menubar ul li .submenu {
+    position: relative;
+    width: 100%;
+    min-width: 215px;
+    background-color: white;
+    left: 0px;
+    top: 0;
+    opacity: 1;
+    transition: all 0.5s;
+    visibility: visible;
+    border-top: 5px solid #006e2f;
   }
   header .container .row .main-box .menu-btn .menubar.active {
     transform: translate(0);

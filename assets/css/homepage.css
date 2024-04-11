@@ -1,10 +1,10 @@
-.slider-section {
+.video-section {
   position: relative;
   margin-top: -260px;
   overflow: hidden;
   z-index: -1;
 }
-.slider-section::after {
+.video-section::after {
   position: absolute;
   content: "";
   box-sizing: border-box;
@@ -15,10 +15,10 @@
   top: 0px;
   left: 0px;
 }
-.slider-section .video-bg video {
+.video-section .video-bg video {
   display: block;
 }
-.slider-section .container .row .content {
+.video-section .container .row .content {
   position: absolute;
   padding: 120px 15px;
   top: 25%;
@@ -29,34 +29,34 @@
   width: 80%;
   margin: 0px auto;
 }
-.slider-section .container .row .content .lottie-animation {
+.video-section .container .row .content .lottie-animation {
   display: flex;
   justify-content: center;
   margin-bottom: -10px;
 }
-.slider-section .container .row .content span {
+.video-section .container .row .content span {
   text-align: center;
   display: block;
   font-weight: 700;
   font-size: 20px;
   padding-bottom: 10px;
 }
-.slider-section .container .row .content h2 {
+.video-section .container .row .content h2 {
   text-align: center;
   font-size: 32px;
   padding-bottom: 20px;
 }
-.slider-section .container .row .content .type-effect {
+.video-section .container .row .content .type-effect {
   text-align: center;
 }
-.slider-section .container .row .content .type-effect .name {
+.video-section .container .row .content .type-effect .name {
   display: flex;
   justify-content: center;
   color: #444;
   font-size: 44px;
   color: white;
 }
-.slider-section .container .row .content .type-effect .name h3 {
+.video-section .container .row .content .type-effect .name h3 {
   width: 31ch;
   border-right: 3px solid;
   animation: blink 1s step-end infinite, type 3.1s steps(31) forwards;
@@ -80,10 +80,10 @@
     width: 0;
   }
 }
-.slider-section .container .row .content .detail {
+.video-section .container .row .content .detail {
   padding-top: 20px;
 }
-.slider-section .container .row .content .detail p {
+.video-section .container .row .content .detail p {
   text-align: center;
   font-size: 18px;
   line-height: 1.8;
@@ -587,17 +587,14 @@
   }
 }
 .pulse:nth-child(1) {
-  -webkit-animation: pulses 2s infinite 0.3s;
   animation: pulses 2s infinite;
 }
 
 .pulse:nth-child(2) {
-  -webkit-animation: pulses 2s infinite 0.3s;
   animation: pulses 2s infinite 0.3s;
 }
 
 .pulse:nth-child(3) {
-  -webkit-animation: pulses 2s infinite 0.3s;
   animation: pulses 2s infinite 0.6s;
 }
 
@@ -618,8 +615,6 @@
   width: 70px;
   line-height: 70px;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 .watsapp-join a {
@@ -796,16 +791,21 @@
   transform: skewX(45deg) scale(1);
 }
 
+@media (min-width: 1400px) {
+  .video-section .container .row .content {
+    top: 20%;
+  }
+}
 @media (max-width: 1399px) {
   .work-process-section .container .row .main-box .box .content .icon .image {
     width: 60%;
   }
 }
 @media (max-width: 1199px) {
-  .slider-section .container .row .content {
+  .video-section .container .row .content {
     width: 100%;
   }
-  .slider-section .container .row .content .type-effect .name h3 {
+  .video-section .container .row .content .type-effect .name h3 {
     text-wrap: wrap;
     animation: none;
     border-right: 0px;
@@ -815,7 +815,7 @@
   }
 }
 @media (max-width: 991px) {
-  .slider-section .main-slider .single-hs-item .slide-content .detail h1 {
+  .video-section .main-slider .single-hs-item .slide-content .detail h1 {
     font-size: 40px;
   }
   .about-section .container .row .main-box .box-1 .image-1 {
@@ -858,10 +858,10 @@
   }
 }
 @media (max-width: 767px) {
-  .slider-section .container .row .content {
+  .video-section .container .row .content {
     padding: 25px 15px;
   }
-  .slider-section .container .row .content .type-effect .name h3 {
+  .video-section .container .row .content .type-effect .name h3 {
     font-size: 46px;
   }
   .about-section .container .row .main-box .box-1 {
@@ -940,7 +940,7 @@
   }
 }
 @media (max-width: 575px) {
-  .slider-section .container .row .content .type-effect .name h3 {
+  .video-section .container .row .content .type-effect .name h3 {
     font-size: 38px;
   }
   .about-section .container .row .main-box .box-1 .image-1 {

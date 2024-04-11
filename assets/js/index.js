@@ -1,36 +1,42 @@
 // header color change start
+let obj = document.styleSheets[0].cssRules;
+console.log(obj);
 document.addEventListener('DOMContentLoaded', function () {
-  // Get the header element
-  const header = document.getElementById('main-header');
+	// Get the header element
+	const header = document.getElementById('main-header');
+	const menu = document.getElementById('menu');
 
-  // Update header color based on current page URL
-  function updateHeaderColor() {
-    // Get the current page URL
-    const currentPage = window.location.href;
+	// Update header color based on current page URL
+	function updateHeaderColor() {
+		// Get the current page URL
+		const currentPage = window.location.href;
 
-    // Check if the URL contains specific keywords to determine the color
-    if (currentPage.includes('homepage.html')) {
-      header.style.backgroundColor = 'none';
-    } 
-     else {
-      // Default color if not matching any specific page
-      header.style.cssText = `
-			background-color: #1e5c9a;	
-			padding: 5px;
+		// Check if the URL contains specific keywords to determine the color
+		if (currentPage.includes('homepage.html')) {
+			header.style.backgroundColor = 'none';
+			header.classList.add("after")
+
+		}
+		else {
+			// Default color if not matching any specific page
+			header.style.cssText = `
+			background-color: rgb(30, 92, 154);	
+			padding: 10px;
 			`;
-    }
-  }
+			menu.style.top = "110px";
+		}
+	}
 
-  // Call the function initially and on page load
-  updateHeaderColor();
+	// Call the function initially and on page load
+	updateHeaderColor();
 
-  // Listen for navigation events (e.g., clicks on links)
-  document.addEventListener('click', function (event) {
-    if (event.target.tagName === 'A') {
-      // Delay the color change slightly to ensure the new page loads
-      setTimeout(updateHeaderColor, 100);
-    }
-  });
+	// Listen for navigation events (e.g., clicks on links)
+	document.addEventListener('click', function (event) {
+		if (event.target.tagName === 'A') {
+			// Delay the color change slightly to ensure the new page loads
+			setTimeout(updateHeaderColor, 100);
+		}
+	});
 });
 // header color change end
 
@@ -44,14 +50,16 @@ const openNav = () => {
 document.getElementById("mobileMenu").addEventListener("click", openNav);
 // hameburger menu end
 
-window.onload= function() {
-	if(screen.width<=575) {
+// slider-section p slice start
+window.onload = function () {
+	if (screen.width <= 575) {
 		const detail = $(".slider-section .container .row .content .detail p").text();;
 		console.log(screen.width);
-		const demo =detail.slice(0,200);
-		$(".slider-section .container .row .content .detail p").text(demo+"...")
+		const demo = detail.slice(0, 200);
+		$(".slider-section .container .row .content .detail p").text(demo + "...")
 	}
 }
+// slider-section p slice end
 
 // solution section script start
 $(".solution-section .container .row .slide .photo:nth-child(1)").addClass("active-img");
@@ -108,16 +116,16 @@ $('.government-slider .container .row .owl-carousel').owlCarousel({
 
 // fancy-box gallery js start
 $('[data-fancybox="gallery"]').fancybox({
-  buttons: [
-    "slideShow",
-    "thumbs",
-    "zoom",
-    "fullScreen",
-    "share",
-    "close"
-  ],
-  loop: true,
-  protect: true
+	buttons: [
+		"slideShow",
+		"thumbs",
+		"zoom",
+		"fullScreen",
+		"share",
+		"close"
+	],
+	loop: true,
+	protect: true
 });
 // fancy-box gallery js end
 

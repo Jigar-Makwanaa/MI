@@ -7,7 +7,7 @@
 
 // vegetables-section start
 .vegetable-section {
-  padding: 60px 0px;
+  padding-bottom: 60px;
 
   .container {
     .row {
@@ -23,6 +23,7 @@
           position: relative;
           cursor: pointer;
           font-family: emoji;
+          margin: 30px 0px !important;
 
           &::before {
             position: absolute;
@@ -49,10 +50,15 @@
           padding: 15px;
 
           .content {
-            padding: 15px;
+            height: 100%;
+
             .image {
+              overflow: hidden;
+
               img {
+                display: block;
                 width: 100%;
+                transition: all 0.5s;
               }
             }
 
@@ -68,10 +74,19 @@
                 color: #333;
                 padding-bottom: 8px;
               }
+
               p {
                 font-weight: 700;
                 line-height: 1.5;
                 color: #666666;
+              }
+            }
+
+            &:hover {
+              .image {
+                img {
+                  transform: scale(1.1);
+                }
               }
             }
           }
@@ -83,40 +98,19 @@
 
 // vegetables-section end
 
+@media (min-width: 1601px) {}
 
 // media query start
-@media (min-width: 1400px) {}
+@media (max-width: 1560px) {
 
-@media (max-width: 1399px) {
-
-  // header start
-  header {
-    .row {
-      .logo-menu {
-        padding: 30px 15px;
-      }
-    }
-  }
-
-  // header end
-}
-
-@media (max-width: 1199px) {
-
-  // footer-start
-  footer {
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            .box {
-              .gallery-box {
-                ul {
-                  li {
-                    width: 30%;
-                  }
-                }
-              }
+  // vegetable-section start
+  .vegetable-section {
+    .container {
+      .row {
+        .main-box {
+          .box {
+            .content {
+              padding: 0px;
             }
           }
         }
@@ -124,62 +118,42 @@
     }
   }
 
-  // footer-end
+  // vegetable-section end
 }
+
+@media (max-width: 1399px) {
+
+  // vegetable-section start
+  .vegetable-section {
+    .container {
+      .row {
+        .main-box {
+          .box {
+            width: 20%;
+
+            .content {
+              padding: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // vegetable-section end
+}
+
+@media (max-width: 1199px) {}
 
 @media (max-width: 991px) {
 
-  // header start
   header {
-    position: relative;
-    padding: 15px 0px;
-
     .container {
       .row {
         .main-box {
           .menu-btn {
-            gap: 30px;
-
             .menubar {
-              position: absolute;
-              top: 130px;
-              left: 0px;
-              background-color: white;
-              width: 100%;
-              transform: translate(-100%);
-              opacity: 0;
-              transition: all 0.5s;
-
-              ul {
-                width: 100%;
-
-                li {
-                  width: 100%;
-                  border-top: 1px solid #dddddd;
-                  padding: 15px;
-
-                  a {
-                    color: #575250;
-                    font-weight: 100;
-                    font-size: 16px;
-                  }
-                }
-              }
-
-              &.active {
-                transform: translate(0);
-                opacity: 1;
-              }
-            }
-
-            .menu-icon {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 6px;
-              align-items: center;
-              justify-content: center;
-              color: white;
-              font-size: 20px;
+              top: 110px;
             }
           }
         }
@@ -187,32 +161,16 @@
     }
   }
 
-  // header end
+  // vegetable-section start
+  .vegetable-section {
+    .container {
+      .row {
+        .main-box {
+          .box {
+            width: 25%;
 
-  // footer start
-  footer {
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            gap: 30px;
-
-            .box {
-              width: 45%;
-
-              &:last-child {
-                width: 42%;
-              }
-
-              .gallery-box {
-                ul {
-                  li {
-                    a {
-                      padding-top: 5px;
-                    }
-                  }
-                }
-              }
+            .content {
+              padding: 0px;
             }
           }
         }
@@ -220,227 +178,54 @@
     }
   }
 
-  // footer end
-
+  // vegetable-section end
 }
 
 @media (max-width: 767px) {
 
-  // footer start
-  footer {
-    .footer-curve {
-      height: 22px;
-      margin: 0 auto -22px;
-    }
-
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            gap: 25px;
-
-            .box {
-              width: 100%;
-
-              &:last-child {
-                width: 55%;
-              }
-
-              .main-heading {
-                h2 {
-                  font-size: 24px;
-                }
-              }
-
-              .content {
-                ul {
-                  li {
-                    padding-bottom: 15px;
-                    gap: 20px;
-
-                    .icon {
-                      font-size: 22px;
-                    }
-
-                    .detail {
-                      span {
-                        font-size: 16px;
-                      }
-
-                      a {
-                        font-size: 16px;
-                      }
-                    }
-                  }
-                }
-              }
-
-              .gallery-box {
-                ul {
-                  gap: 8px;
-
-                  li {
-                    width: 95px;
-                    height: 85px;
-
-                    a {
-                      width: 100%;
-                      padding-top: 0px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .sub-footer-curve {
-      width: 70%;
-    }
-  }
-
-  // footer end
-}
-
-@media (max-width: 670px) {
-
-  // footer start
-  footer {
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            .box {
-              &:nth-child(3) {
-                width: 64%
-              }
-            }
+  // vegetable-section start
+  .vegetable-section {
+    .container {
+      .row {
+        .main-box {
+          .box {
+            width: 33.33%;
           }
         }
       }
     }
   }
 
-  // footer end
-
+  // vegetable-section end
 }
+
+@media (max-width: 670px) {}
 
 @media (max-width: 575px) {
 
-  // footer-start
-  footer {
-    .sub-footer-curve {
-      width: 100%;
-      padding: 0px 15px;
-      text-align: center;
+  // vegetable-section start
+  .vegetable-section {
+    .container {
+      .row {
+        .main-heading {
+          h2 {
+            font-size: 70px;
+          }
+        }
 
-      &::after {
-        display: none;
-      }
-    }
-
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            .box {
-              &:last-child {
-                width: 75%;
-              }
-            }
+        .main-box {
+          .box {
+            width: 50%;
           }
         }
       }
     }
   }
 
-  // footer-end
+  // vegetable-section end
 }
 
-@media (max-width: 470px) {
 
-  // footer-start
-  footer {
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            .box {
-              &:last-child {
-                width: 93%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // footer-end
-
-}
-
-@media (max-width: 420px) {
-
-  // footer-start
-  footer {
-    .sub-footer-curve {
-      width: 100%;
-
-      &::after {
-        display: none;
-      }
-    }
-
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            .box {
-              &:last-child {
-                width: 100%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // footer-end
-
-}
-
-@media (max-width: 390px) {
-
-  // footer start
-  footer {
-    .main-footer {
-      .container {
-        .row {
-          .main-box {
-            .box {
-              .gallery-box {
-                ul {
-                  li {
-                    width: 90px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // footer end
-}
-
-@media (max-width: 320px) {}
-
-@media (max-width: 275px) {}
+@media (max-width: 400px) {}
 
 // media query end

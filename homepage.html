@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="assets/css/global.css">
 	<link rel="stylesheet" href="assets/css/homepage.css">
 	<!-- css link end -->
+
+	<!-- owl carousel js and css start -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
 		rel="stylesheet" />
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
@@ -21,6 +23,7 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<!-- owl carousel js and css end -->
 
 	<!-- lottie player js link start -->
 	<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
@@ -82,10 +85,12 @@
 	</header>
 	<!-- header end -->
 
-	<!-- slider-section start -->
-	<section class="slider-section">
+	<!-- video-section start -->
+	<section class="video-section">
 		<div class="video-bg">
-			<video id="myVideo" src="assets/img/slide_2.mp4" autoplay loop></video>
+			<video id="myVideo" autoplay loop muted>
+				<source src="assets/img/slide_2.mp4" type="video/mp4">
+			</video>
 		</div>
 		<div class="container">
 			<div class="row">
@@ -113,7 +118,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- slider-section end -->
+	<!-- video-section end -->
 
 	<!-- about-section start -->
 	<section class="about-section" id="about">
@@ -305,64 +310,74 @@
 				</div>
 				<div class="main-box flex justidy-between align-center">
 					<div class="box">
-						<div class="content" onmouseover="currentSlide(1)">
-							<div class="detail">
-								<div class="icon">
-									<img src="assets/img/fruit.png" alt="">
-								</div>
-								<div class="info">
-									<h2>Fruits</h2>
+						<a href="homepage.html">
+							<div class="content" onmouseover="currentSlide(1)">
+								<div class="detail">
+									<div class="icon">
+										<img src="assets/img/fruit.png" alt="">
+									</div>
+									<div class="info">
+										<h2>Fruits</h2>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="box">
-						<div class="content" onmouseover="currentSlide(2)">
-							<div class="detail">
-								<div class="icon">
-									<img src="assets/img/vegetable.png" alt="">
-								</div>
-								<div class="info">
-									<h2>Vegetables</h2>
+						<a href="vegetable.html">
+							<div class="content" onmouseover="currentSlide(2)">
+								<div class="detail">
+									<div class="icon">
+										<img src="assets/img/vegetable.png" alt="">
+									</div>
+									<div class="info">
+										<h2>Vegetables</h2>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="box">
-						<div class="content" onmouseover="currentSlide(3)">
-							<div class="detail">
-								<div class="icon">
-									<img src="assets/img/spices.png" alt="">
-								</div>
-								<div class="info">
-									<h2>Spices</h2>
+						<a href="spices.html">
+							<div class="content" onmouseover="currentSlide(3)">
+								<div class="detail">
+									<div class="icon">
+										<img src="assets/img/spices.png" alt="">
+									</div>
+									<div class="info">
+										<h2>Spices</h2>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="box">
-						<div class="content" onmouseover="currentSlide(4)">
-							<div class="detail">
-								<div class="icon">
-									<img src="assets/img/cloth.png" alt="">
-								</div>
-								<div class="info">
-									<h2>Clothes</h2>
+						<a href="vegetable.html">
+							<div class="content" onmouseover="currentSlide(4)">
+								<div class="detail">
+									<div class="icon">
+										<img src="assets/img/cloth.png" alt="">
+									</div>
+									<div class="info">
+										<h2>Clothes</h2>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="box">
-						<div class="content" onmouseover="currentSlide(5)">
-							<div class="detail">
-								<div class="icon">
-									<img src="assets/img/medicine.png" alt="">
-								</div>
-								<div class="info">
-									<h2>Medicine</h2>
+						<a href="homepage.html">
+							<div class="content" onmouseover="currentSlide(5)">
+								<div class="detail">
+									<div class="icon">
+										<img src="assets/img/medicine.png" alt="">
+									</div>
+									<div class="info">
+										<h2>Medicine</h2>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
