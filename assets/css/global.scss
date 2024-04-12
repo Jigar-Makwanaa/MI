@@ -65,14 +65,14 @@ h2 {
   overflow: hidden;
 }
 
-// header start
+// #main-header start
 .after {
   &::after {
-    transform: translate(-100%);
+    transform: translate(0%) !important;
   }
 }
 
-header {
+#main-header {
   position: relative;
   z-index: 1;
   padding-top: 40px;
@@ -89,6 +89,7 @@ header {
     z-index: -1;
     transition: all 0.5s;
     opacity: 1;
+    transform: translate(-100%);
   }
 
   .container {
@@ -223,7 +224,7 @@ header {
   }
 }
 
-// header end
+// #main-header end
 
 
 // footer-section start
@@ -379,8 +380,8 @@ footer {
 
 @media (max-width: 1399px) {
 
-  // header start
-  header {
+  // #main-header start
+  #main-header {
     .row {
       .logo-menu {
         padding: 30px 15px;
@@ -388,7 +389,7 @@ footer {
     }
   }
 
-  // header end
+  // #main-header end
 }
 
 @media (max-width: 1199px) {
@@ -419,8 +420,8 @@ footer {
 
 @media (max-width: 991px) {
 
-  // header start
-  header {
+  // #main-header start
+  #main-header {
     position: relative;
     padding: 15px 0px;
 
@@ -493,7 +494,7 @@ footer {
     }
   }
 
-  // header end
+  // #main-header end
 
   // footer start
   footer {

@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Check if the URL contains specific keywords to determine the color
 		if (currentPage.includes('homepage.html')) {
 			header.style.backgroundColor = 'none';
-			header.classList.add("after")
 
 		}
 		else {
@@ -22,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			padding: 10px;
 			`;
 			menu.style.top = "110px";
+			header.classList.add("after")
+
 		}
 	}
 
